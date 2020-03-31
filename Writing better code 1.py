@@ -29,9 +29,14 @@ from math import log
 # in Sequential
 # in the first will have to specify math.log() 
 
-# setting a if __name__ == '__main__' space even when scrpting
-if __name__ == '__main__':
+def main():
+    '''
+    description
     
+    examples
+    
+    returns
+    '''
     # using dir on root directory to explore docs in console
     dir(tf)
     
@@ -115,4 +120,17 @@ if __name__ == '__main__':
     for letter, number in zip(L1, L2):
         print (f'{letter} is from L1 and {number} is from L2')
     
+    # defaultdict(list) vs dict
+    # trying to increment d[k] when it hasn't been assigned
+    # would cause an error for a regular dictionary
+    # useful when using append with things that have new keys
+    s = 'mississippi'
+    d = defaultdict(list)
+    for k in s:
+        d[k] += 1
     
+    
+    
+# setting a if __name__ == '__main__' space even when scrpting
+if __name__ == '__main__':
+    main()
